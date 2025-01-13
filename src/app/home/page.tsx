@@ -19,24 +19,6 @@ export default function Home() {
                             <li><Link href="/resume">Resume</Link></li>
                             <li><Link href="/portfolio">Portfolio</Link></li>
                             <li><Link href="/contact">Contact</Link></li>
-                            {/* <li className="dropdown"><a href="#"><span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Dropdown 1</a></li>
-                                    <li className="dropdown"><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-                                        <ul>
-                                            <li><a href="#">Deep Dropdown 1</a></li>
-                                            <li><a href="#">Deep Dropdown 2</a></li>
-                                            <li><a href="#">Deep Dropdown 3</a></li>
-                                            <li><a href="#">Deep Dropdown 4</a></li>
-                                            <li><a href="#">Deep Dropdown 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Dropdown 2</a></li>
-                                    <li><a href="#">Dropdown 3</a></li>
-                                    <li><a href="#">Dropdown 4</a></li>
-                                </ul>
-                            </li> */}
-                            {/* <li><a href="contact.html">Contact</a></li> */}
                         </ul>
                         <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
                     </nav>
@@ -47,9 +29,10 @@ export default function Home() {
             <main className="main">
                 <section id="hero" className="hero section dark-background">
 
-                    <img src="/img/landingpage1.png" alt="" data-aos="fade-in" />
+                    <img src="/img/landingpage1.jpg" alt="" data-aos="fade-in" />
 
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
+                        {/* <h2>Mohammed</h2>1 */}
                         <h2>Hannan Desai</h2>
                         <p>I&apos;m <span className="typed" data-typed-items="Compuer Enginner, Software Engineer, Application Developer">Software Engineer</span>
                             <span className="typed-cursor typed-cursor--blink"></span></p>

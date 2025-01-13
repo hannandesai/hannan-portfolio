@@ -35,9 +35,9 @@ export default function About() {
             <header id="header" className="header d-flex align-items-center fixed-top">
                 <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-                    <a href="index.html" className="logo d-flex align-items-center">
+                    <Link href="home" className="logo d-flex align-items-center">
                         <h1 className="sitename">Mohammed Hannan</h1>
-                    </a>
+                    </Link>
 
                     <nav id="navmenu" className="navmenu">
                         <ul>
