@@ -34,7 +34,7 @@ export default function Home() {
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
                         {/* <h2>Mohammed</h2>1 */}
                         <h2>Hannan Desai</h2>
-                        <p>I&apos;m <span className="typed" data-typed-items="Compuer Enginner, Software Engineer, Application Developer">Software Engineer</span>
+                        <p>I&apos;m <span className="typed" data-typed-items="Computer Enginner, Software Engineer, Web Application Developer">Software Engineer</span>
                             <span className="typed-cursor typed-cursor--blink"></span></p>
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/mohannandesai0286" target='_blank'><i className="bi bi-linkedin"></i></a>
