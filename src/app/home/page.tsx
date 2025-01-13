@@ -50,7 +50,7 @@ export default function Home() {
                     <img src="/img/landingpage1.png" alt="" data-aos="fade-in" />
 
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
-                        <h2>Mohammed Hannan Desai</h2>
+                        <h2>Hannan Desai</h2>
                         <p>I&apos;m <span className="typed" data-typed-items="Compuer Enginner, Software Engineer, Application Developer">Software Engineer</span>
                             <span className="typed-cursor typed-cursor--blink"></span></p>
                         <div className="social-links">
