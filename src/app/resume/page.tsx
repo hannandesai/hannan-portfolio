@@ -168,7 +168,7 @@ export default function Resume() {
             <footer id="footer" className="footer dark-background">
                 <div className="container">
                     {/* <h3 className="sitename">Debugging: Turning 'Oops' into 'Aha!' since 8 years.</h3> */}
-                    <p>Debugging: Turning 'Oops' into 'Aha!' since 8 years.</p>
+                    <p>Debugging: Turning &apos;Oops&apos; into &apos;Aha!&apos; since 8 years.</p>
                     {/* <div className="social-links d-flex justify-content-center">
                         <a href=""><i className="bi bi-twitter-x"></i></a>
                         <a href=""><i className="bi bi-facebook"></i></a>

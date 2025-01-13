@@ -8,9 +8,7 @@ export default function Home() {
             <header id="header" className="header d-flex align-items-center fixed-top">
                 <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-                    <a href="index.html" className="logo d-flex align-items-center">
-                        {/* <h1 className="sitename">Hannan</h1> */}
-                    </a>
+                   
 
                     <nav id="navmenu" className="navmenu">
                         <ul>
@@ -47,11 +45,11 @@ export default function Home() {
             <main className="main">
                 <section id="hero" className="hero section dark-background">
 
-                    <img src="/img/bg-image2.jpeg" alt="" data-aos="fade-in" />
+                    <img src="/img/landingpage.png" alt="" data-aos="fade-in" />
 
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
                         <h2>Mohammed Hannan Desai</h2>
-                        <p>I'm <span className="typed" data-typed-items="Compuer Enginner, Software Engineer, Application Developer">Software Engineer</span>
+                        <p>I&apos;m <span className="typed" data-typed-items="Compuer Enginner, Software Engineer, Application Developer">Software Engineer</span>
                             <span className="typed-cursor typed-cursor--blink"></span></p>
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/mohannandesai0286" target='_blank'><i className="bi bi-linkedin"></i></a>

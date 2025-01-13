@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 
-declare var Waypoint: any;
+declare const Waypoint: any;
 export default function About() {
     useEffect(() => {
         initializeSkills();
@@ -12,13 +12,13 @@ export default function About() {
     function initializeSkills() {
         const interval = setInterval(() => {
             if (Waypoint) {
-                let skillsAnimation = document.querySelectorAll('.skills-animation');
+                const skillsAnimation = document.querySelectorAll('.skills-animation');
                 skillsAnimation.forEach((item) => {
                     new Waypoint({
                         element: item,
                         offset: '80%',
                         handler: function () {
-                            let progress = item.querySelectorAll('.progress .progress-bar');
+                            const progress = item.querySelectorAll('.progress .progress-bar');
                             progress.forEach((el: any) => {
                                 el.style.width = el.getAttribute('aria-valuenow') + '%';
                             });
@@ -112,8 +112,8 @@ export default function About() {
                                 <p className="py-1">
                                     My professional journey began in 2018 as a Software Developer at I-Link Infosoft Consultants Pvt Ltd, focusing on responsive web applications and microservices architecture. In 2021, I joined Inventyv Software Services Pvt Ltd as a Senior Software Developer, where I optimized frontend performance, integrated AI-driven customer support systems, and pioneered innovations in micro frontends.
                                 </p>
-                                <p className="py-1 ">
-                                    In 2023, I advanced to the role of Technical Lead at Inventyv Software Services, managing a team of developers while implementing secure architectures using OAuth and leveraging Rust for high-performance application development. In 2024, as a Graduate Intern at New Jersey Courts, I developed a React- and Node.js-based system to simplify the legal expungement process, integrating AI capabilities through OpenAI's GPT-4 API for a seamless user experience.
+                                <p className="py-1">
+                                    In 2023, I advanced to the role of Technical Lead at Inventyv Software Services, managing a team of developers while implementing secure architectures using OAuth and leveraging Rust for high-performance application development. In 2024, as a Graduate Intern at New Jersey Courts, I developed a React- and Node.js-based system to simplify the legal expungement process, integrating AI capabilities through OpenAIs GPT-4 API for a seamless user experience.
                                 </p>
                                 <p className="py-1">
                                     My expertise spans modern frameworks such as Angular, React, and Rust, alongside a strong foundation in microservices, cloud platforms like AWS and GCP, and secure web application architectures. I am passionate about crafting user-centric, high-performance solutions and staying at the forefront of emerging technologies to drive innovation.
