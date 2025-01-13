@@ -68,7 +68,7 @@ export default function About() {
                     <nav className="breadcrumbs">
                         <div className="container">
                             <ol>
-                                <li><a href="index.html">Home</a></li>
+                                <li><Link href="home">Home</Link></li>
                                 <li className="current">About</li>
                             </ol>
                         </div>

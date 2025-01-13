@@ -41,7 +41,7 @@ export default function Portfolio() {
                     <nav className="breadcrumbs">
                         <div className="container">
                             <ol>
-                                <li><a href="index.html">Home</a></li>
+                                <li><Link href="home">Home</Link></li>
                                 <li className="current">Portfolio</li>
                             </ol>
                         </div>

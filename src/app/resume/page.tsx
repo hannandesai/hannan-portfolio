@@ -39,11 +39,12 @@ export default function Resume() {
                         </div>
                     </div>
                     <nav className="breadcrumbs">
-                        <div className="container">
-                            <ol>
-                                <li><a href="index.html">Home</a></li>
+                        <div className="container d-flex justify-content-between align-items-center">
+                            <ol className="mb-0">
+                                <li><Link href="home">Home</Link></li>
                                 <li className="current">Resume</li>
                             </ol>
+                            <a href="/Resume_MohammedHannanDesai.pdf" className="download-link" download style={{textDecoration: "underline"}}>Download Resume</a>
                         </div>
                     </nav>
                 </div>
