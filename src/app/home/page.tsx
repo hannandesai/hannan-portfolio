@@ -1,31 +1,32 @@
 "use client";
-import Link from 'next/link';
+import { useEffect } from "react";
 
+declare const Typed: any;
 export default function Home() {
+    useEffect(() => {
+        initTyped();
+    }, []);
+
+    function initTyped() {
+        const interval = setInterval(() => {
+            if (Typed) {
+                clearInterval(interval);
+                const selectTyped = document.querySelector('.typed');
+                if (selectTyped) {
+                    let typed_strings = selectTyped.getAttribute('data-typed-items')?.split(',') || [];
+                    new Typed('.typed', {
+                        strings: typed_strings,
+                        loop: true,
+                        typeSpeed: 100,
+                        backSpeed: 50,
+                        backDelay: 2000
+                    });
+                }
+            }
+        }, 100);
+    }
     return (
-        <div className="index-page">
-
-            <header id="header" className="header d-flex align-items-center fixed-top">
-                <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-                    <a href="index.html" className="logo d-flex align-items-center">
-                        {/* <h1 className="sitename">Hannan</h1> */}
-                    </a>
-
-                    <nav id="navmenu" className="navmenu">
-                        <ul>
-                            <li><Link href="/home" className="active">Home</Link></li>
-                            <li><Link href="/about" >About</Link></li>
-                            <li><Link href="/resume">Resume</Link></li>
-                            <li><Link href="/portfolio">Portfolio</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                        </ul>
-                        <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                    </nav>
-
-                </div>
-            </header>
-
+        <>
             <main className="main">
                 <section id="hero" className="hero section dark-background">
 
@@ -34,7 +35,7 @@ export default function Home() {
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
                         {/* <h2>Mohammed</h2>1 */}
                         <h2>Hannan Desai</h2>
-                        <p>I&apos;m <span className="typed" data-typed-items="Computer Enginner, Software Engineer, Web Application Developer">Software Engineer</span>
+                        <p>I&apos;m <span className="typed" data-typed-items="Computer Engineer, Software Engineer, Web Application Developer">Software Engineer</span>
                             <span className="typed-cursor typed-cursor--blink"></span></p>
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/mohannandesai0286" target='_blank'><i className="bi bi-linkedin"></i></a>
@@ -66,10 +67,9 @@ export default function Home() {
                 </div>
             </footer>
 
-            <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+            {/* <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a> */}
 
             {/* <div id="preloader"></div> */}
-
-        </div>
+        </>
     );
 }

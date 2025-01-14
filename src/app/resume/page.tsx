@@ -2,29 +2,7 @@
 import Link from 'next/link';
 export default function Resume() {
     return (
-        <div className="resume-page">
-
-            <header id="header" className="header d-flex align-items-center fixed-top">
-                <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-                    <Link href="home" className="logo d-flex align-items-center">
-                        <h1 className="sitename">Mohammed Hannan</h1>
-                    </Link>
-
-                    <nav id="navmenu" className="navmenu">
-                        <ul>
-                            <li><Link href="/home">Home</Link></li>
-                            <li><Link href="/about" >About</Link></li>
-                            <li><Link href="/resume" className="active">Resume</Link></li>
-                            <li><Link href="/portfolio">Portfolio</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                        </ul>
-                        <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                    </nav>
-
-                </div>
-            </header>
-
+        <>
             <main className="main">
 
                 <div className="page-title" data-aos="fade">
@@ -44,7 +22,7 @@ export default function Resume() {
                                 <li><Link href="home">Home</Link></li>
                                 <li className="current">Resume</li>
                             </ol>
-                            <a href="/Resume_MohammedHannanDesai.pdf" className="download-link" download style={{textDecoration: "underline"}}>Download Resume</a>
+                            <a href="/Resume_MohammedHannanDesai.pdf" className="download-link" download style={{ textDecoration: "underline" }}>Download Resume</a>
                         </div>
                     </nav>
                 </div>
@@ -167,10 +145,8 @@ export default function Resume() {
                 </div>
             </footer>
 
-            <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
-
             {/* <div id="preloader"></div> */}
 
-        </div>
+        </>
     );
 }

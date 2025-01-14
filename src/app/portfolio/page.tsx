@@ -2,28 +2,7 @@ import Link from "next/link";
 
 export default function Portfolio() {
     return (
-        <div className="portfolio-page">
-
-            <header id="header" className="header d-flex align-items-center fixed-top">
-                <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-                    <Link href="home" className="logo d-flex align-items-center">
-                        <h1 className="sitename">Mohammed Hannan</h1>
-                    </Link>
-
-                    <nav id="navmenu" className="navmenu">
-                        <ul>
-                            <li><Link href="/home">Home</Link></li>
-                            <li><Link href="/about" >About</Link></li>
-                            <li><Link href="/resume">Resume</Link></li>
-                            <li><Link href="/portfolio" className="active">Portfolio</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
-                        </ul>
-                        <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                    </nav>
-
-                </div>
-            </header>
+        <>
 
             <main className="main">
 
@@ -53,13 +32,13 @@ export default function Portfolio() {
 
                         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-                            <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                            {/* <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
                                 <li data-filter="*" className="filter-active">All</li>
                                 <li data-filter=".filter-app">App</li>
                                 <li data-filter=".filter-product">Product</li>
                                 <li data-filter=".filter-branding">Branding</li>
                                 <li data-filter=".filter-books">Books</li>
-                            </ul>
+                            </ul> */}
 
                             <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
@@ -152,9 +131,9 @@ export default function Portfolio() {
                 </div>
             </footer>
 
-            <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+            {/* <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a> */}
 
             {/* <div id="preloader"></div> */}
-        </div>
+        </>
     );
 }

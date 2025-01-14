@@ -2,29 +2,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="contact-page">
-
-      <header id="header" className="header d-flex align-items-center fixed-top">
-        <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-          <Link href="home" className="logo d-flex align-items-center">
-            <h1 className="sitename">Mohammed Hannan</h1>
-          </Link>
-
-          <nav id="navmenu" className="navmenu">
-            <ul>
-              <li><Link href="/home">Home</Link></li>
-              <li><Link href="/about" >About</Link></li>
-              <li><Link href="/resume">Resume</Link></li>
-              <li><Link href="/portfolio">Portfolio</Link></li>
-              <li><Link href="/contact" className="active">Contact</Link></li>
-            </ul>
-            <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-
-        </div>
-      </header>
-
+    <>
       <main className="main">
         <div className="page-title" data-aos="fade">
           <div className="heading">
@@ -156,10 +134,10 @@ export default function Contact() {
         </div>
       </footer>
 
-      <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+      {/* <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a> */}
 
       {/* <div id="preloader"></div> */}
 
-    </div>
+    </>
   );
 }
