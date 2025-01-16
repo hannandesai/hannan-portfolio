@@ -1,6 +1,42 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState('');
+
+  function sendMessage() {
+    if (name && email && subject && message) {
+      setAlert("inprocess");
+      fetch('https://vemt6fb9x7.execute-api.us-east-1.amazonaws.com/default/sendContactEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, subject, message })
+      }).then(response => response.json()).then(data => {
+        if (data.success) {
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+          setAlert("success");
+        } else {
+          setAlert("error");
+        }
+      }).catch((error) => {
+        console.error('Error:', error);
+        setAlert("error");
+      });
+    } else {
+      setAlert("missingData");
+    }
+  }
+
   return (
     <>
       <main className="main">
@@ -79,35 +115,35 @@ export default function Contact() {
 
             </div>
 
-            <form className="php-email-form" data-aos="fade-up" data-aos-delay="600">
+            <div className="php-email-form" data-aos="fade-up" data-aos-delay="600">
               <div className="row gy-4">
 
                 <div className="col-md-6">
-                  <input type="text" name="name" className="form-control" placeholder="Your Name" />
+                  <input type="text" name="name" className="form-control" placeholder="Your Name" value={name} onChange={(e) => { setName(e.target.value) }} />
                 </div>
 
                 <div className="col-md-6 ">
-                  <input type="email" className="form-control" name="email" placeholder="Your Email" />
+                  <input type="email" className="form-control" name="email" placeholder="Your Email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                 </div>
 
                 <div className="col-md-12">
-                  <input type="text" className="form-control" name="subject" placeholder="Subject" />
+                  <input type="text" className="form-control" name="subject" placeholder="Subject" value={subject} onChange={(e) => { setSubject(e.target.value) }} />
                 </div>
 
                 <div className="col-md-12">
-                  <textarea className="form-control" name="message" placeholder="Message"></textarea>
+                  <textarea className="form-control" name="message" placeholder="Message" value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
                 </div>
 
                 <div className="col-md-12 text-center">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  {alert === "missingData" && <div className="alert alert-danger">Please fill all the fields</div>}
+                  {alert === "error" && <div className="alert alert-danger">Something went wrong. Please try again later.</div>}
+                  {alert === "success" && <div className="alert alert-success">Your message has been sent. Thank you!</div>}
+                  {alert === "inprocess" && <div className="alert alert-info">Sending your message...</div>}
+                  <button onClick={sendMessage}>Send Message</button>
                 </div>
 
               </div>
-            </form>
+            </div>
 
           </div>
 

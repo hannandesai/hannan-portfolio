@@ -1,11 +1,27 @@
+"use client";
 import Link from "next/link";
+import { useEffect } from "react";
 
+declare const GLightbox: any;
 export default function Portfolio() {
+    useEffect(() => {
+        initGlightbox();
+    }, []);
+
+    function initGlightbox() {
+        const interval = setInterval(() => {
+            if (GLightbox) {
+                clearInterval(interval);
+                const glightbox = GLightbox({
+                    selector: '.glightbox'
+                });
+            }
+        }, 100);
+    }
+
     return (
         <>
-
             <main className="main">
-
                 <div className="page-title" data-aos="fade">
                     <div className="heading">
                         <div className="container">

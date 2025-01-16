@@ -137,7 +137,6 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 
         <Script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
-        <Script src="/vendor/php-email-form/validate.js" strategy="afterInteractive" />
         <Script src="/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/vendor/typed.js/typed.umd.js" strategy="afterInteractive" />
         <Script src="/vendor/purecounter/purecounter_vanilla.js" strategy="afterInteractive" />
