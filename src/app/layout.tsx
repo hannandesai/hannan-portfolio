@@ -120,7 +120,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                   <li>
                     <Link href="/portfolio" onClick={hideMobileNavToggle} className={pathname === '/portfolio' ? 'active' : ''}>Portfolio</Link>
                   </li>
-                  <li className={pathname === '/contact' ? 'active' : ''}>
+                  <li>
                     <Link href="/contact" onClick={hideMobileNavToggle} className={pathname === '/contact' ? 'active' : ''}>Contact</Link>
                   </li>
                 </ul>
