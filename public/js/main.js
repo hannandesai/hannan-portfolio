@@ -145,41 +145,42 @@
   /**
    * Init swiper sliders
    */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
-      let config = {
-        "loop": true,
-        "speed": 600,
-        "autoplay": {
-          "delay": 5000
-        },
-        "slidesPerView": "auto",
-        "pagination": {
-          "el": ".swiper-pagination",
-          "type": "bullets",
-          "clickable": true
-        },
-        "breakpoints": {
-          "320": {
-            "slidesPerView": 1,
-            "spaceBetween": 40
-          },
-          "1200": {
-            "slidesPerView": 3,
-            "spaceBetween": 20
-          }
-        }
-      };
+  // function initSwiper() {
+  //   document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
+  //     let config = {
+  //       "loop": true,
+  //       "speed": 600,
+  //       "autoplay": {
+  //         "delay": 5000
+  //       },
+  //       "slidesPerView": "auto",
+  //       "pagination": {
+  //         "el": ".swiper-pagination",
+  //         "type": "bullets",
+  //         "clickable": true
+  //       },
+  //     };
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
+  //     // "breakpoints": {
+  //     //     "320": {
+  //     //       "slidesPerView": 1,
+  //     //       "spaceBetween": 40
+  //     //     },
+  //     //     "1200": {
+  //     //       "slidesPerView": 3,
+  //     //       "spaceBetween": 20
+  //     //     }
+  //     //   }
 
-  window.addEventListener("load", initSwiper);
+  //     if (swiperElement.classList.contains("swiper-tab")) {
+  //       initSwiperWithCustomPagination(swiperElement, config);
+  //     } else {
+  //       new Swiper(swiperElement, config);
+  //     }
+  //   });
+  // }
+
+  // window.addEventListener("load", initSwiper);
 
   /**
    * Init isotope layout and filters

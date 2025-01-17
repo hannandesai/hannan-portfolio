@@ -139,13 +139,13 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <Script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/vendor/typed.js/typed.umd.js" strategy="afterInteractive" />
-        <Script src="/vendor/purecounter/purecounter_vanilla.js" strategy="afterInteractive" />
+        {/* <Script src="/vendor/purecounter/purecounter_vanilla.js" strategy="afterInteractive" /> */}
         <Script src="/vendor/waypoints/noframework.waypoints.js" strategy="afterInteractive" />
         <Script src="/vendor/swiper/swiper-bundle.min.js" strategy="afterInteractive" />
         <Script src="/vendor/glightbox/js/glightbox.min.js" strategy="afterInteractive" />
         <Script src="/vendor/imagesloaded/imagesloaded.pkgd.min.js" strategy="afterInteractive" />
-        <Script src="/vendor/isotope-layout/isotope.pkgd.min.js" strategy="afterInteractive" />
-        <Script src="/js/main.js" strategy="afterInteractive" />
+        {/* <Script src="/vendor/isotope-layout/isotope.pkgd.min.js" strategy="afterInteractive" /> */}
+        {/* <Script src="/js/main.js" strategy="afterInteractive" /> */}
       </body>
     </html>
   );

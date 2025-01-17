@@ -1,0 +1,179 @@
+[
+    {
+        "projectId": 1,
+        "projectName": "UniTrade",
+        "projectType": "Online Trading Platform App",
+        "projectCategory": "Web Application",
+        "projectDescription": "UniTrade is a digital trading platform designed to facilitate seamless transactions in online marketplaces. The platform supports real-time order matching, market transparency, and trade execution, providing users with comprehensive tools for managing and tracking trades efficiently.",
+        "projectImage": "project1.jpg",
+        "projectGithub": "https://github.com/hannandesai/electronic-trading-system-app",
+        "tehnologies": [
+            {
+                "id": "react",
+                "name": "React"
+            },
+            {
+                "id": "nodejs",
+                "name": "Node.js"
+            },
+            {
+                "id": "javascript",
+                "name": "JavaScript"
+            },
+            {
+                "id": "tailwind",
+                "name": "Tailwind CSS"
+            },
+            {
+                "id": "postgresql",
+                "name": "PostgreSQL"
+            }
+        ],
+        "gallery": ["project-3.png"],
+        "reportDoc": "UniTrade_Report.pdf"
+    },
+    {
+        "projectId": 2,
+        "projectName": "Quality Management System",
+        "projectType": "Task Management and Quality Assurance App",
+        "projectCategory": "Web Application",
+        "projectDescription": "A centralized Quality Management System (QMS) designed to streamline task assignments, reduce manual errors, and enhance efficiency. The system enables task tracking, checklist management, automated notifications, and report generation for seamless organizational workflows.",
+        "projectImage": "project1.jpg",
+        "projectGithub": "https://github.com",
+        "tehnologies": [
+            {
+                "id": "angular",
+                "name": "Angular"
+            },
+            {
+                "id": "nodejs",
+                "name": "Node.js"
+            },
+            {
+                "id": "typescript",
+                "name": "TypeScript"
+            },
+            {
+                "id": "bootstrap",
+                "name": "Bootstrap"
+            },
+            {
+                "id": "mongodb",
+                "name": "MongoDB"
+            }
+        ],
+        "gallery": ["project-4.png"],
+        "reportDoc": "QMS.doc"
+    },
+    {
+        "projectId": 3,
+        "projectName": "Dike ChatBot",
+        "projectType": "AI Powered Recruitment Software",
+        "projectCategory": "Web Application",
+        "projectDescription": "ChatBot for Recruitment is a web application that automates the initial interview process for companies using AI algorithms to evaluate candidates based on their responses. It streamlines the recruitment process by selecting questions, assessing candidates, and providing admins with detailed results and options for further action.",
+        "projectImage": "project1.jpg",
+        "projectGithub": "https://github.com/hannandesai/dike-chat-bot",
+        "tehnologies": [
+            {
+                "id": "angular",
+                "name": "Angular"
+            },
+            {
+                "id": "nodejs",
+                "name": "Node.js"
+            },
+            {
+                "id": "typescript",
+                "name": "TypeScript"
+            },
+            {
+                "id": "bootstrap",
+                "name": "Bootstrap"
+            },
+            {
+                "id": "mongodb",
+                "name": "MongoDB"
+            }
+        ],
+        "gallery": ["project-5.png"],
+        "reportDoc": "Dike_ChatBot.doc"
+    },
+    {
+        "projectId": 4,
+        "projectName": "Image Recognition System",
+        "projectType": "Cloud-Based Application",
+        "projectCategory": "Backend Service",
+        "projectDescription": "A Java-based image recognition project leveraging AWS Rekognition for processing and S3 for storage, featuring car and text recognition applications. Deployed on EC2 with EBS integration, it efficiently handles image analysis and stores outputs in the cloud.",
+        "projectImage": "project1.jpg",
+        "projectGithub": "https://github.com/hannandesai/image-recognizition",
+        "tehnologies": [
+            {
+                "id": "java",
+                "name": "Java"
+            },
+            {
+                "id": "aws",
+                "name": "AWS"
+            },
+            {
+                "id": "awsec2",
+                "name": "EC2"
+            },
+            {
+                "id": "awss3",
+                "name": "AWS S3"
+            },
+            {
+                "id": "awssqs",
+                "name": "AWS SQS"
+            },
+            {
+                "id": "awsrekog",
+                "name": "AWS Rekognition"
+            },
+            {
+                "id": "awsebs",
+                "name": "AWS EBS"
+            }
+        ],
+        "gallery": ["project-2.jpg"],
+        "reportDoc": "Image_Recognition_System.pdf"
+    },
+    {
+        "projectId": 5,
+        "projectName": "Wine Quality Prediction App",
+        "projectType": "Machine Learning on Cloud",
+        "projectCategory": "Machine Learning Model",
+        "projectDescription": "A cloud-based application leveraging Apache Spark on AWS EMR and S3 to train and deploy a wine quality prediction model. The project includes a model training module using linear regression and a prediction module running in Docker. Data is processed in parallel across EC2 instances for scalability and efficiency.",
+        "projectImage": "project1.jpg",
+        "projectGithub": "https://github.com/hannandesai/wine-quality-prediction",
+        "tehnologies": [
+            {
+                "id": "java",
+                "name": "Java"
+            },
+            {
+                "id": "spark",
+                "name": "Apche Spark"
+            },
+            {
+                "id": "aws",
+                "name": "AWS"
+            },
+            {
+                "id": "awsec2",
+                "name": "EC2"
+            },
+            {
+                "id": "awss3",
+                "name": "AWS S3"
+            },
+            {
+                "id": "docker",
+                "name": "Docker"
+            }
+        ],
+        "gallery": ["project-1.jpg"],
+        "reportDoc": "Wine_Quality_Prediction.pdf"
+    }
+]

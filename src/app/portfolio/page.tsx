@@ -1,22 +1,29 @@
 "use client";
+import "./portfolio.scss";
+import projects from "./projects.json";
+
 import Link from "next/link";
-import { useEffect } from "react";
+import { useRouter } from 'next/navigation';
 
-declare const GLightbox: any;
 export default function Portfolio() {
-    useEffect(() => {
-        initGlightbox();
-    }, []);
+    const router = useRouter();
+    // useEffect(() => {
 
-    function initGlightbox() {
-        const interval = setInterval(() => {
-            if (GLightbox) {
-                clearInterval(interval);
-                const glightbox = GLightbox({
-                    selector: '.glightbox'
-                });
-            }
-        }, 100);
+    // }, []);
+
+    // function initGlightbox() {
+    //     const interval = setInterval(() => {
+    //         if (GLightbox) {
+    //             clearInterval(interval);
+    //             const glightbox = GLightbox({
+    //                 selector: '.glightbox'
+    //             });
+    //         }
+    //     }, 100);
+    // }
+
+    function goToDetail(project: any) {
+        router.push(`/project-detail?id=${encodeURIComponent(project.projectId)}`);
     }
 
     return (
@@ -48,76 +55,98 @@ export default function Portfolio() {
 
                         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-                            {/* <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                                <li data-filter="*" className="filter-active">All</li>
-                                <li data-filter=".filter-app">App</li>
-                                <li data-filter=".filter-product">Product</li>
-                                <li data-filter=".filter-branding">Branding</li>
-                                <li data-filter=".filter-books">Books</li>
-                            </ul> */}
-
                             <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
+                                {projects.map((project, index) => (
+                                    <div className="col-lg-4 col-md-6 portfolio-item isotope-item  filter-branding" key={index} onClick={() => goToDetail(project)}>
+                                        <div className="card d-flex flex-column p-3 rounded-3 shadow-md project-card">
+                                            {/* Card Image */}
+                                            <img
+                                                className="mb-3"
+                                                src="/img/no-img.svg"
+                                                alt="Slick Portfolio"
+                                                height="50"
+                                                width="40"
+                                                style={{ borderColor: "grey" }}
+                                            />
 
-                                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-                                    <div className="portfolio-content h-100">
-                                        <img src="/img/portfolio/project-3.png" className="img-fluid" style={{ width: '410px', height: '250px' }} alt="" />
-                                        <div className="portfolio-info">
-                                            <h4>UniTrade</h4>
-                                            <p>Web Application</p>
-                                            <a href="/img/portfolio/project-3.png" title="Branding 1" data-gallery="portfolio-gallery-branding" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                                            <a href="https://github.com/hannandesai/electronic-trading-system-app" title="Github URL" className="details-link" target="_blank"><i className="bi bi-link-45deg"></i></a>
+                                            {/* Card Title and Link */}
+                                            <div className="d-flex justify-content-between align-items-center mb-1">
+                                                <h4 className="h5 mb-0" style={{ color: "#18d26e" }}>{project.projectName}</h4>
+                                                <a
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    href={project.projectGithub}
+                                                    title="GitHub"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    data-help="GitHub"
+                                                    style={{ borderColor: "#2e2e2e" }}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    <i className="bi bi-github text-white h5"></i>
+                                                </a>
+                                            </div>
+
+                                            {/* Divider */}
+                                            <hr className="my-2" />
+
+                                            {/* Meta Information */}
+                                            <div className="small mt-2">
+                                                <div className="d-flex align-items-center mb-2">
+                                                    <i className="bi bi-diagram-3 me-2"></i>
+                                                    <span>{project.projectType}</span>
+                                                </div>
+                                            </div>
+
+                                            <hr className="my-2" />
+
+                                            {/* <div className="small mt-2">
+                                                <div className="d-flex align-items-center mb-2">
+                                                    <i className="bi bi-clock me-2"></i>
+                                                    <span>1 day</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Divider */}
+                                            {/* <hr className="my-2" /> */}
+
+                                            {/* Card Description */}
+                                            <p className="small mb-4 fixed-height">
+                                                {project.projectDescription}
+                                            </p>
+
+                                            {/* Buttons */}
+                                            {/* <div className="d-flex justify-content-between mb-2">
+                                                <button className="btn btn-outline-secondary btn-sm" style={{ borderColor: "grey", color: "white" }}>January 2025</button>
+                                                <button className="btn btn-outline-secondary btn-sm" style={{ borderColor: "grey", color: "white" }}>now</button>
+                                            </div> */}
+
+                                            {/* Divider */}
+                                            <hr className="my-2" />
+
+
+                                            {/* Skills */}
+                                            <div className="d-flex flex-wrap">
+                                                {project.tehnologies.map((technology, index) => (
+                                                    <a
+                                                        className="badge text-white me-3 my-2 d-flex align-items-center tech-img"
+                                                        data-help={technology.name}
+                                                        key={index}
+                                                        title={technology.name}>
+                                                        <img
+                                                            className="mx-1 my-1"
+                                                            src={"tech/" + technology.id + ".png"}
+                                                            alt={technology.name}
+                                                            height="32"
+                                                            width="32"
+                                                        />
+                                                    </a>
+
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-                                    <div className="portfolio-content h-100">
-                                        <img src="/img/portfolio/project-4.png" className="img-fluid" style={{ width: '410px', height: '250px' }} alt="" />
-                                        <div className="portfolio-info">
-                                            <h4>Quality Management System(QMS)</h4>
-                                            <p>Project & Task Management Tool - Web Application</p>
-                                            {/* <a href="/img/portfolio/project-4.png" title="Branding 1" data-gallery="portfolio-gallery-book" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a> */}
-                                            <a href="portfolio-details.html" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                                    <div className="portfolio-content h-100">
-                                        <img src="/img/portfolio/project-1.jpg" className="img-fluid" style={{ width: '410px', height: '250px' }} alt="" />
-                                        <div className="portfolio-info">
-                                            <h4>Wine Quality Prediction</h4>
-                                            <p>Trained Machine Learning model using AWS</p>
-                                            {/* <a href="/img/portfolio/project-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a> */}
-                                            <a href="https://github.com/hannandesai/wine-quality-prediction" title="Github URL" className="details-link" target="_blank"><i className="bi bi-link-45deg"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-                                    <div className="portfolio-content h-100">
-                                        <img src="/img/portfolio/project-2.jpg" className="img-fluid" style={{ width: '410px', height: '250px' }} alt="" />
-                                        <div className="portfolio-info">
-                                            <h4>Image Recognition Service</h4>
-                                            <p>Detects object & text from images using AWS</p>
-                                            {/* <a href="/img/portfolio/project-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a> */}
-                                            <a href="https://github.com/hannandesai/image-recognizition" title="Github URL" className="details-link" target="_blank"><i className="bi bi-link-45deg"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                                    <div className="portfolio-content h-100">
-                                        <img src="/img/portfolio/project-5.png" className="img-fluid" style={{ width: '410px', height: '250px' }} alt="" />
-                                        <div className="portfolio-info">
-                                            <h4>Dike ChatBot For Recruitment</h4>
-                                            <p>ChatBot for recruitment - Web Application</p>
-                                            {/* <a href="/img/portfolio/project-5.png" title="App 2" data-gallery="portfolio-gallery-app" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a> */}
-                                            <a href="https://github.com/hannandesai/dike-chat-bot" title="Github URL" className="details-link" target="_blank"><i className="bi bi-link-45deg"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
 
                         </div>
@@ -130,15 +159,7 @@ export default function Portfolio() {
 
             <footer id="footer" className="footer dark-background">
                 <div className="container">
-                    {/* <h3 className="sitename">Turning Ideas into Impactful Software.</h3> */}
                     <p>Turning Ideas into Impactful Software.</p>
-                    {/* <div className="social-links d-flex justify-content-center">
-                        <a href=""><i className="bi bi-twitter-x"></i></a>
-                        <a href=""><i className="bi bi-facebook"></i></a>
-                        <a href=""><i className="bi bi-instagram"></i></a>
-                        <a href=""><i className="bi bi-skype"></i></a>
-                        <a href=""><i className="bi bi-linkedin"></i></a>
-                    </div> */}
                     <div className="container">
                         <div className="copyright">
                             <span>Copyright</span> <strong className="px-1 sitename">Hannan Desai</strong> <span>All Rights Reserved</span>
@@ -146,10 +167,6 @@ export default function Portfolio() {
                     </div>
                 </div>
             </footer>
-
-            {/* <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a> */}
-
-            {/* <div id="preloader"></div> */}
         </>
     );
 }

@@ -1,10 +1,10 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 declare const Typed: any;
 export default function Home() {
     useEffect(() => {
-        initTyped();
+            initTyped();
     }, []);
 
     function initTyped() {
