@@ -34,14 +34,10 @@ jobs:
       - name: Deploy to S3
         run: aws s3 sync ./out s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
-       - name: Invalidate CloudFront Root Domain Cache
+      - name: Invalidate CloudFront Root Cache
         run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_ROOT }} \
-            --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_ROOT }} --paths "/*"
         
-      - name: Invalidate CloudFront Root Domain Cache
+      - name: Invalidate CloudFront Sub Cache
         run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_SUB }} \
-            --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_SUB }} --paths "/*"
