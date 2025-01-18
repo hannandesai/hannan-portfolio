@@ -35,12 +35,10 @@ const Portfolio = () => {
 
                     <div className="container">
 
-                        <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-                            <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                            <div className="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
                                 {projects.map((project, index) => (
-                                    <div className="col-lg-4 col-md-6 portfolio-item isotope-item  filter-branding" key={index} onClick={() => goToDetail(project)}>
+                                    <div className="col-lg-4 col-md-6 portfolio-item filter-branding" key={index} onClick={() => goToDetail(project)}>
                                         <div className="card d-flex flex-column p-3 rounded-3 shadow-md project-card">
                                             {/* Card Image */}
                                             <img
@@ -130,9 +128,6 @@ const Portfolio = () => {
                                     </div>
                                 ))}
                             </div>
-
-                        </div>
-
                     </div>
 
                 </section>

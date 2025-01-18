@@ -1,8 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
+  const effectRan = useRef(false);
+
   useEffect(() => {
-    initTyped();
+    if (effectRan.current === false) {
+      initTyped();
+      effectRan.current = true;
+    }
+
+    return () => {
+      effectRan.current = true;
+    };
   }, []);
 
   function initTyped() {

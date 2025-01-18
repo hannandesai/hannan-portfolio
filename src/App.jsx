@@ -2,16 +2,17 @@ import "../public/vendor/bootstrap/css/bootstrap.min.css";
 import "../public/vendor/bootstrap-icons/bootstrap-icons.css";
 import "../public/vendor/aos/aos.css";
 import "../public/vendor/swiper/swiper-bundle.min.css";
-import "../public/vendor/glightbox/css/glightbox.min.css";
 import "./styles/scss/main.scss";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { routeGroups } from "./routes";
 import * as Pages from "./pages";
 import { useEffect } from "react";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
-  const pathname = "";
+  const location = useLocation();
+  const pathname = location.pathname;
   useEffect(() => {
     toggleScrolled();
     toggleScrollTop();
@@ -107,6 +108,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <div className="index-page">
 
         <header id="header" className="header d-flex align-items-center fixed-top">
