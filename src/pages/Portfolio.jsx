@@ -1,29 +1,11 @@
-"use client";
-import "./portfolio.scss";
-import projects from "./projects.json";
+import { Link, useNavigate } from "react-router-dom";
+import projects from "../data/projects.json";
 
-import Link from "next/link";
-import { useRouter } from 'next/navigation';
+const Portfolio = () => {
+    const navigate = useNavigate();
 
-export default function Portfolio() {
-    const router = useRouter();
-    // useEffect(() => {
-
-    // }, []);
-
-    // function initGlightbox() {
-    //     const interval = setInterval(() => {
-    //         if (GLightbox) {
-    //             clearInterval(interval);
-    //             const glightbox = GLightbox({
-    //                 selector: '.glightbox'
-    //             });
-    //         }
-    //     }, 100);
-    // }
-
-    function goToDetail(project: any) {
-        router.push(`/project-detail?id=${encodeURIComponent(project.projectId)}`);
+    function goToDetail(project) {
+        navigate(`/project-detail?id=${encodeURIComponent(project.projectId)}`);
     }
 
     return (
@@ -43,7 +25,7 @@ export default function Portfolio() {
                     <nav className="breadcrumbs">
                         <div className="container">
                             <ol>
-                                <li><Link href="home">Home</Link></li>
+                                <li><Link to="home">Home</Link></li>
                                 <li className="current">Portfolio</li>
                             </ol>
                         </div>
@@ -170,3 +152,5 @@ export default function Portfolio() {
         </>
     );
 }
+
+export default Portfolio;

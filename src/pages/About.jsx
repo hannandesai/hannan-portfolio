@@ -1,9 +1,7 @@
-"use client";
-import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-declare const Waypoint: any;
-export default function About() {
+const About = () => {
     useEffect(() => {
         initializeSkills();
     }, []);
@@ -19,7 +17,7 @@ export default function About() {
                         offset: '80%',
                         handler: function () {
                             const progress = item.querySelectorAll('.progress .progress-bar');
-                            progress.forEach((el: any) => {
+                            progress.forEach((el) => {
                                 el.style.width = el.getAttribute('aria-valuenow') + '%';
                             });
                         }
@@ -46,7 +44,7 @@ export default function About() {
                     <nav className="breadcrumbs">
                         <div className="container">
                             <ol>
-                                <li><Link href="home">Home</Link></li>
+                                <li><Link to="home">Home</Link></li>
                                 <li className="current">About</li>
                             </ol>
                         </div>
@@ -424,3 +422,5 @@ export default function About() {
         </>
     );
 }
+
+export default About;

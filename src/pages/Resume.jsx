@@ -1,6 +1,6 @@
-"use client";
-import Link from 'next/link';
-export default function Resume() {
+import { Link } from "react-router-dom";
+
+const Resume = () => {
     return (
         <>
             <main className="main">
@@ -19,7 +19,7 @@ export default function Resume() {
                     <nav className="breadcrumbs">
                         <div className="container d-flex justify-content-between align-items-center">
                             <ol className="mb-0">
-                                <li><Link href="home">Home</Link></li>
+                                <li><Link to="/home">Home</Link></li>
                                 <li className="current">Resume</li>
                             </ol>
                             <a href="/Resume_MohammedHannanDesai.pdf" className="download-link" download style={{ textDecoration: "underline" }}>Download Resume</a>
@@ -150,3 +150,5 @@ export default function Resume() {
         </>
     );
 }
+
+export default Resume;
