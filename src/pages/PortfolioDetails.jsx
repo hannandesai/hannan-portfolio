@@ -119,7 +119,7 @@ const PortfolioDetails = () => {
             <footer id="footer" className="footer dark-background">
                 <div className="container">
                     {/* <h3 className="sitename">Personal</h3> */}
-                    <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+                    <p>Turning Ideas into Impactful Software.</p>
                     {/* <div className="social-links d-flex justify-content-center">
             <a href=""><i className="bi bi-twitter-x"></i></a>
             <a href=""><i className="bi bi-facebook"></i></a>

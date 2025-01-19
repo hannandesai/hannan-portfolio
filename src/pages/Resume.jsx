@@ -11,7 +11,7 @@ const Resume = () => {
                             <div className="row d-flex justify-content-center text-center">
                                 <div className="col-lg-8">
                                     <h1>Resume</h1>
-                                    {/* <p className="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p> */}
+                                    <p className="mb-0">Full-Stack Software Engineer specializing in designing and architecting scalable web solutions, with a focus on robust frontend architecture and seamless user experiences.</p>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ const Resume = () => {
             <footer id="footer" className="footer dark-background">
                 <div className="container">
                     {/* <h3 className="sitename">Debugging: Turning 'Oops' into 'Aha!' since 8 years.</h3> */}
-                    <p>Debugging: Turning &apos;Oops&apos; into &apos;Aha!&apos; since 8 years.</p>
+                    <p>Crafting scalable architectures for seamless user experiences.</p>
                     {/* <div className="social-links d-flex justify-content-center">
                         <a href=""><i className="bi bi-twitter-x"></i></a>
                         <a href=""><i className="bi bi-facebook"></i></a>

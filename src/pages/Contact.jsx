@@ -79,7 +79,7 @@ const Contact = () => {
                                 <div className="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
                                     <i className="icon bi bi-telephone flex-shrink-0"></i>
                                     <div>
-                                        <h3>Call Me</h3>
+                                        <h3>Call</h3>
                                         <p>+1(551) 254-8706</p>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                                 <div className="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
                                     <i className="icon bi bi-envelope flex-shrink-0"></i>
                                     <div>
-                                        <h3>Email Me</h3>
+                                        <h3>Email</h3>
                                         <p>desaihannan9900@gmail.com</p>
                                     </div>
                                 </div>

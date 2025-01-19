@@ -58,7 +58,7 @@ const Home = () => {
       <footer id="footer" className="footer dark-background">
         <div className="container">
           {/* <h3 className="sitename">Powered by caffeine and clean code.</h3> */}
-          <p>Powered by caffeine and clean code.</p>
+          <p>Where creativity meets functionality—engineering solutions that inspire.</p>
           {/* <div className="social-links d-flex justify-content-center">
                 <a href=""><i className="bi bi-twitter-x"></i></a>
                 <a href=""><i className="bi bi-facebook"></i></a>

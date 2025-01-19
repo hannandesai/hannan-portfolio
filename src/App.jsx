@@ -84,7 +84,7 @@ function App() {
     });
   }
 
-  const renderRoutes = (routes, parentPath = "") => 
+  const renderRoutes = (routes, parentPath = "") =>
     routes.map(({ path, component, children, parameters }) => {
       const ComponentToRender = Pages[component];
       const paramRoute =
@@ -117,7 +117,7 @@ function App() {
           <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <Link to="home" className="logo d-flex align-items-center">
-              <h1 className="sitename">Mohammed Hannan</h1>
+              {(pathname !== '/home' && pathname !== '/') ? <h1 className="sitename">Mohammed Hannan</h1> : null}
             </Link>
 
             <nav id="navmenu" className="navmenu">

@@ -56,10 +56,10 @@ const About = () => {
 
                         <div className="row gy-4 justify-content-center">
                             <div className="col-lg-4">
-                                <img src="/img/self_photo.jpeg" className="img-fluid" alt="" />
+                                <img src="/img/hannan.jpeg" className="img-fluid" alt="" style={{height: "715px"}}/>
                             </div>
                             <div className="col-lg-8 content">
-                                <h2>Software Engineer, Web Application Developer &amp; Full-Stack Developer</h2>
+                                <h2>Software Engineer/Architect & Full-Stack Web Developer</h2>
                                 {/* <p className="fst-italic py-3">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                                     magna aliqua.
@@ -399,7 +399,7 @@ const About = () => {
             <footer id="footer" className="footer dark-background">
                 <div className="container">
                     {/* <h3 className="sitename">I speak fluent JavaScript... and coffee.</h3> */}
-                    <p>I speak fluent JavaScript... and coffee.</p>
+                    <p>Building future-proof applications for modern challenges.</p>
                     {/* <div className="social-links d-flex justify-content-center">
                         <a href=""><i className="bi bi-twitter-x"></i></a>
                         <a href=""><i className="bi bi-facebook"></i></a>

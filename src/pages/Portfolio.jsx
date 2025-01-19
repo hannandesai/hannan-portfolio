@@ -136,7 +136,7 @@ const Portfolio = () => {
 
             <footer id="footer" className="footer dark-background">
                 <div className="container">
-                    <p>Turning Ideas into Impactful Software.</p>
+                    <p>Empowering innovation through scalable, cloud-driven solutions, and crafting digital experiences that reflect precision, creativity, and user-first design.</p>
                     <div className="container">
                         <div className="copyright">
                             <span>Copyright</span> <strong className="px-1 sitename">Hannan Desai</strong> <span>All Rights Reserved</span>
