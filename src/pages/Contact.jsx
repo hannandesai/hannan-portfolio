@@ -11,7 +11,7 @@ const Contact = () => {
     function sendMessage() {
         if (name && email && subject && message) {
             setAlert("inprocess");
-            fetch('https://vemt6fb9x7.execute-api.us-east-1.amazonaws.com/default/sendContactEmail', {
+            fetch('https://qg07jah810.execute-api.us-east-1.amazonaws.com/prod/sendContactEmail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

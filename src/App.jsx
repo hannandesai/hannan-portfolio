@@ -3,24 +3,26 @@ import "../public/vendor/bootstrap-icons/bootstrap-icons.css";
 import "../public/vendor/aos/aos.css";
 import "../public/vendor/swiper/swiper-bundle.min.css";
 import "./styles/scss/main.scss";
+import "./App.css";
 
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { routeGroups } from "./routes";
 import * as Pages from "./pages";
 import { useEffect } from "react";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   const location = useLocation();
   const pathname = location.pathname;
   useEffect(() => {
     toggleScrolled();
-    toggleScrollTop();
+    // toggleScrollTop();
     aosInit();
 
     document.addEventListener('scroll', () => {
       toggleScrolled();
-      toggleScrollTop();
+      // toggleScrollTop();
     });
   }, []);
 
@@ -143,9 +145,8 @@ function App() {
         </header>
 
         <Routes>{renderRoutes(routeGroups)}</Routes>
-
-        <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center" onClick={scrollToTop}><i className="bi bi-arrow-up-short"></i></a>
       </div>
+      <Chatbot />
 
     </>
   )
